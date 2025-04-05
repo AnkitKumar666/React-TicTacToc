@@ -4,7 +4,8 @@ A classic Tic-Tac-Toe (X/O) game built with **React** and powered by **Vite** fo
 
 ## 🚀 Demo
 
-👉 [Live Demo](https://react-tic-tac-toc.vercel.app/) *(Add your deployed link here)*
+👉 [Live Demo](https://react-tic-tac-toc.vercel.app/) 
+👉  [![Tic Tac Toe Screenshot](https://github.com/AnkitKumar666/React-TicTacToc/blob/1f77d722fc73618d1d51002daa371b81752d009c/public/Tic-Tac-Toe.png)](https://react-tic-tac-toc.vercel.app/)
 
 ## 🧠 Features
 
@@ -32,3 +33,17 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/your-username/tic-tac-toe.git
 cd tic-tac-toe
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+```bash
+npm run dev
+```
+
+
