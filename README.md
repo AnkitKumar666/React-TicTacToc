@@ -33,8 +33,8 @@ Follow these steps to run the project locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe.git
-cd tic-tac-toe
+git clone https://github.com/AnkitKumar666/React-TicTacToc.git
+cd React-TicTacToc
 ```
 
 ### 2. Install Dependencies
