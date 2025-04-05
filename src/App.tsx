@@ -5,12 +5,12 @@ import "./App.css";
 
 function App() {
 
-  const [isHuman, setisHuman] = useState(true);
+  const [isHuman, _setisHuman] = useState(true);
 
   const [turn, setturn] = useState(1);
   const [winner, setwinner] = useState(0);
   const [moves, setmoves] = useState(0);
-  const [color , setcolor] = useState("#dd8e6f");
+  const [color, setcolor] = useState("#dd8e6f");
 
   var initTable: number[][] = [
     [0, 0, 0],
@@ -21,7 +21,7 @@ function App() {
   const [tableArray, setTableArray] = useState(initTable);
   const [gamerunning, setgamerunning] = useState(true);
 
-  function Reset(){
+  function Reset() {
     initTable = [
       [0, 0, 0],
       [0, 0, 0],
@@ -71,7 +71,7 @@ function App() {
   }
 
   function onSquareClick(row: number, col: number) {
-    if(isHuman){
+    if (isHuman) {
       initTable = tableArray;
       initTable[row][col] = turn;
       setTableArray(initTable);
@@ -79,30 +79,30 @@ function App() {
       if (gamerunning) {
         var m = moves + 1;
         setmoves(m);
-    
-        if(moves % 2 ==0){
+
+        if (moves % 2 == 0) {
           setturn(2);
           setcolor("#3f7cab");
         }
-        else{
+        else {
           setturn(1);
           setcolor("#dd8e6f");
         }
       }
     }
-    else if(!isHuman){
+    else if (!isHuman) {
       initTable = tableArray;
       initTable[row][col] = turn;
       setTableArray(initTable);
 
-      if(gamerunning){
+      if (gamerunning) {
         var m = moves + 1;
         setmoves(m);
       }
-      
+
     }
 
-    
+
     setgamerunning(checkArray(tableArray));
     setwinner(turn);
 
@@ -110,12 +110,12 @@ function App() {
       setgamerunning(false);
     }
 
-  
+
   }
 
   return (
     <>
-      <div className="h-screen w-screen" style={{backgroundColor:color}}>
+      <div className="h-screen w-screen" style={{ backgroundColor: color }}>
         <div className="text-center p-5 text-xl">
           <h1>Tic Tac Toe</h1>
         </div>
@@ -201,7 +201,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex justify-center p-5"><button title="Reset" onClick={()=>{Reset()}} className="flex justify-center">Reset</button></div>
+        <div className="flex justify-center p-5"><button title="Reset" onClick={() => { Reset() }} className="flex justify-center">Reset</button></div>
       </div>
     </>
   );
